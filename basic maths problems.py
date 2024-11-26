@@ -43,7 +43,7 @@ print(Palindrome(121))
 # GCD or HCF
 
 
-# print all Divisior
+
 #check for Prime
 
 def isPrime(num):
@@ -61,7 +61,6 @@ def isPrime(num):
 print(isPrime(15))
 
 
-"""
 # method 2
 def prime(num):
     if num <2:
@@ -70,6 +69,9 @@ def prime(num):
         if num %i == 0:
             return "No, It's is not Prime"
     return "Yes, It's Prime"
+
+
+""" below is method is used to iterate till the root of given number . and complexity is root of(n)"""
 
 def optimizePrime(num):
     if num <2:
@@ -84,7 +86,37 @@ def optimizePrime(num):
 print(prime(121))
 print(optimizePrime(11))
 
-"""
 
+
+# print all div
+
+def AllDivisor(num):
+    k = 1
+    while k*k<= num:
+        if num % k == 0:
+            print(k)
+            if k != (num//k):
+                print(num//k)
+        k+=1
+
+print(AllDivisor(25))
+
+
+ 
+# armstrong
+
+def armstrong(num):
+    ans = 0
+    temp = num
+    # we have to  find len of number for power
+    power = len(str(num))  # you can use other method as well
+    while num > 0:
+        reaminder = num % 10
+        num = num // 10
+        ans += reaminder**power
+    return temp == ans
+
+print(armstrong(123))
+print(armstrong(153))
 
 
